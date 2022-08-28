@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kibana
+  namespace: argocd
+spec:
+  syncPolicy:
+    automated:
+      prune: true
+  project: default
+  source:
+    repoURL: https://helm.elastic.co
+    targetRevision: 7.17.3
+    chart: kibana
+  destination:
+    namespace: default
+    server: 'https://kubernetes.default.svc'
+  
