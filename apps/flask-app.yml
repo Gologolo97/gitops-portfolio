@@ -9,9 +9,9 @@ spec:
       prune: true
   project: default
   source:
-    repoURL: 'git@github.com:Gologolo97/chart-portfolio.git'
+    repoURL: 'git@github.com:Gologolo97/app-portfolio.git'
     targetRevision: HEAD
-    path: flask-app
+    path: flask-chart
   destination:
     name: ''
     namespace: default
